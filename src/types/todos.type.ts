@@ -1,5 +1,5 @@
 export interface Todos {
-  Todos: Todo[];
+  todos: Todo[];
 }
 
 interface Todo {

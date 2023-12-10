@@ -7,8 +7,11 @@ import { TodoBody } from "../../types/todos.type";
 import { TodoStatus } from "../../enums/todos.enum";
 
 export const updatedTodo = async (id: string): Promise<void> => {
+  console.log("dari api update todo", id);
   try {
     const getTodores = await getTodo(id);
+
+    console.log(getTodores.data.result);
 
     if (getTodores.status === 200) {
       const todo = getTodores.data.result;
@@ -27,6 +30,6 @@ export const updatedTodo = async (id: string): Promise<void> => {
       });
     }
   } catch (error) {
-    throw new Error("error updating todo");
+    console.log("error updating todo");
   }
 };
