@@ -9,11 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkPurple:"#140A26",
+        darkPurple: "#140A26",
       },
       fontFamily: {
         Montserrat: ["Montserrat"],
         Raleway: ["Raleway"],
+      },
+      height: {
+        taskList: "calc(100vh-260vh)",
       },
     },
   },
