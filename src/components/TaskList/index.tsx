@@ -17,9 +17,6 @@ if (isError) {
   )
 }
 
-
-
-console.log(data);
   return (
     <section className="flex flex-col overflow-x-hidden overflow-y-auto h-taskList rounded">
       {data?.todos.map((todo) => {

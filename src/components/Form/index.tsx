@@ -82,6 +82,8 @@ const Form: React.FC<Props> = ({ inProp, onClose }) => {
   const onSubmit = (data: Inputs): void => {
     try {
       mutation.mutate(data);
+      reset();
+      onClose();
     } catch (error) {
       new Error("Error when create todo");
     }
@@ -145,7 +147,9 @@ const Form: React.FC<Props> = ({ inProp, onClose }) => {
                 <button onClick={() => reset()}>Reset</button>
               ) : (
                 <input
-                  onClick={() => setValue("status", "uncompleted")}
+                  onClick={() => {
+                    setValue("status", "uncompleted");
+                  }}
                   type="submit"
                   value="Add"
                   className="bg-transparent text-md font-bold text-darkPurple outline-none ml-1"

@@ -7,7 +7,7 @@ export const getTodo = async (
   try {
     const res = await axios({
       method: "GET",
-      url: `http://localhost:3000/api/todo/${id}`,
+      url: `${import.meta.env.VITE_APP_API_BASE_URL}/api/todo/${id}`,
     });
 
     return res;
